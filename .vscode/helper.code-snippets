@@ -1,0 +1,33 @@
+{
+  "react page": {
+    // "scope": "tsx",
+    "prefix": "react",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export class ${1:}Cmp extends React.Component {",
+      "  componentDidMount() {}",
+      "  render() {",
+      "    return <div className='$1Cmp'>$1Cmp</div>;",
+      "  }",
+      "}"
+    ],
+    "description": "创建class组件快捷方式"
+  },
+  "hook page": {
+    // "scope": "tsx",
+    "prefix": "hookTemplate",
+    "body": [
+      "import React, { useState, useEffect } from 'react';",
+      "",
+      "export const ${1:}Cmp = () => {",
+      "  const [state, setState] = useState();",
+      "  useEffect(() => {",
+      "    //",
+      "  }, []);",
+      "  return <div>$1Cmp</div>;",
+      "};"
+    ],
+    "description": "创建hook组件快捷方式"
+  }
+}
