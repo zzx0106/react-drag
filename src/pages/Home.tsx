@@ -1,8 +1,8 @@
 import React from 'react';
 
-export class ContentCmp extends React.Component {
-  componentDidMount() {}
+class HomePage extends React.Component {
   render() {
-    return <div className='ContentCmp'>ContentCmp</div>;
+    return <div className="HomePage">HomePage</div>;
   }
 }
+export default HomePage;

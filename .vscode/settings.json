@@ -21,7 +21,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode" // 这种就是html太长会折叠成column模式
   },
   "editor.tabSize": 2,
-  "prettier.printWidth": 140, // 超过最大值换行
+  "prettier.printWidth": 120, // 超过最大值换行
   "prettier.bracketSpacing": true,
   "prettier.jsxBracketSameLine": true,
   "prettier.trailingComma": "es5", //尽可能控制尾随逗号的输出。 有效选项： '无' - 无尾随逗号 ' es5' - 在ES5中有效的尾随逗号（对象，数组等） 'all' - 尾随逗号 尽可能（函数参数）

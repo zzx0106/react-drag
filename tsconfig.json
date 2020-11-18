@@ -15,17 +15,22 @@
     "module": "esnext", // 指定模块代码生成
     "moduleResolution": "node", // 使用 Node.js 风格解析模块
     "resolveJsonModule": true, // 允许使用 .json 扩展名导入的模块
-    "isolatedModules": true, // 将每个文件作为单独的模块（与“ts.transpileModule”类似）。
+    "isolatedModules": false, // 将每个文件作为单独的模块（与“ts.transpileModule”类似）。
     "noEmit": true, // 不输出(意思是不编译代码，只执行类型检查)
     "jsx": "react", // 在.tsx文件中支持JSX
     "sourceMap": true, // 生成相应的.map文件
     "declaration": true, // 生成相应的.d.ts文件
-    "noUnusedLocals": true, // 报告未使用的本地变量的错误
-    "noUnusedParameters": true, // 报告未使用参数的错误
+    "noUnusedLocals": false, // 报告未使用的“本地变量”的错误
+    "noUnusedParameters": false, // 报告未使用“参数”的错误
+    "noImplicitThis": false, // 函数体内使用this，不需要定义
     "experimentalDecorators": true, // 启用对ES装饰器的实验性支持
     "noFallthroughCasesInSwitch": true, // 报告switch语句的fallthrough错误。（即，不允许switch的case语句贯穿）
     "baseUrl": "./", // 解析路径
-    "rootDir": "./" // 仅用来控制输出的目录结构
+    "rootDir": "./", // 仅用来控制输出的目录结构
+    "paths": {
+      // 如果新增paths 需要重启编辑器才行
+      "@/*": ["src/*"]
+    },
   },
   "include": ["src"],
   "exclude": ["node_modules", "build", "dist", "public"]

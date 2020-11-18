@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { Home } from './home';
+import App from './App';
 
 // 装饰普通方法 target 是类的prototype
 // 静态方法 target对应的是类的构造函数
-function getNameDecorator(target: any, key: string, descriptor: PropertyDescriptor) {
+function getNameDecorator(target: object, key: string, descriptor: PropertyDescriptor) {
   // descriptor相当于definedProperty的第三个参数
   // descriptor （必须有 官方说的我理解不了，我理解的是 属性描述
   // 1、简单点就是 设置属性的值value，
@@ -16,6 +16,7 @@ function getNameDecorator(target: any, key: string, descriptor: PropertyDescript
   console.log(target, key, descriptor.value);
   const fn: Function = descriptor.value;
   descriptor.value = function () {
+    // eslint-disable-next-line prefer-rest-params
     const data = fn.apply(this, arguments);
     console.log('劫持的参数', data);
     return data + 2131;
@@ -33,7 +34,7 @@ class Test {
 console.log('zxxxx', new Test('zzx'));
 ReactDOM.render(
   <React.StrictMode>
-    <Home></Home>
+    <App></App>
   </React.StrictMode>,
   document.getElementById('root')
 );
