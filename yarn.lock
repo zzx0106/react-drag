@@ -11029,6 +11029,11 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+vhtml@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/vhtml/download/vhtml-2.2.0.tgz#369e6823ed6c32cbb9f6e33395bae7c65faa014c"
+  integrity sha1-Np5oI+1sMsu59uMzlbrnxl+qAUw=
+
 vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
