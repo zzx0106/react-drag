@@ -28,7 +28,7 @@ class Test {
   @getNameDecorator
   getName() {
     console.log('this', this);
-    return 123;
+    return 1234;
   }
 }
 console.log('zxxxx', new Test('zzx'));
